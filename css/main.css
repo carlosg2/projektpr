@@ -461,6 +461,7 @@ img {
 .o-page-footer {
   padding: 90px 0;
   background-color: #e5eaec;
+  padding: 90px 40px;
   color: #a0aeb3; }
   @media screen and (max-width: 1023px) {
     .o-page-footer {

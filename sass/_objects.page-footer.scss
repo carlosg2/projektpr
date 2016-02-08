@@ -1,6 +1,7 @@
 .o-page-footer {
     padding: 90px 0;
     background-color: $color-page-background;
+    padding: 90px 40px;
     color: $color-page-footer-text;
     
     @media screen and ( max-width: $tablet_landscape - 1 + px ) {

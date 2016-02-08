@@ -1,0 +1,11 @@
+.c-contact {
+
+	@media screen and ( max-width: $tablet_landscape - 1 + px ) {
+		//height: 600px !important;
+	}
+
+	p {
+		margin-bottom: 2em;
+		line-height: 1.4;
+	}
+}

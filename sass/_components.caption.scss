@@ -1,0 +1,29 @@
+.c-caption {
+	@include hover;
+	@include opacity(0);
+	position: absolute;
+	left: 0; bottom: -100%;
+	z-index: 10;
+	width: 100%;
+	background-color: rgba($color-caption-background, .9);
+	padding: 20px;
+	color: $color-caption-text;
+	
+	h4 {
+		margin-bottom: .5em;
+		font-weight: $font-weight-bold;
+	}
+	
+	.c-nav-social {
+		li {
+			padding-right: 5px;
+		}
+	
+		a {
+			width: 28px; height: 28px;
+			background-color: $color-caption-text;
+			line-height: 28px;
+			color: $color-caption-background;
+		}
+	}
+}

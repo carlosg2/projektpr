@@ -1,0 +1,50 @@
+.sbHolder {
+	@include box-shadow( $gray-iron 0 0 0 3px inset );
+	float: right;
+	position: relative; z-index: 30;
+	width: 100%; height: 40px;
+	
+	.sbSelector {
+		position: absolute;
+		left: 0; top: 0;
+		display: block;
+		width: 100%; height: 40px;
+		line-height: 40px;
+		outline: none;
+		overflow: hidden;
+		text-indent: 10px;
+		
+		&:link, &:visited, &:hover {
+			outline: none;
+		}
+	}
+
+	&:focus
+		.sbSelector {
+			outline: none;
+		}
+	}
+	
+	.sbToggle {
+		display: block;
+		position: absolute; right: 3px; top: 5px;
+		width: 30px; height: 30px;
+	}
+	
+	.sbOptions {
+		position: absolute; top: 29px; left: 0; z-index: 1;
+		width: 100%;
+		background-color: white;
+		border: solid 1px $gray-iron;
+		overflow: hidden;
+		overflow-y: auto;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	
+		a {
+			display: block;
+			outline: none;
+			padding: 0 0 0 10px;
+		}
+	}
+}

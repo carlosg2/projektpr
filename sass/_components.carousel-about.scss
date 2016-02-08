@@ -1,0 +1,30 @@
+#about {
+
+	.owl-carousel {
+		@media screen and ( min-width: $tablet_landscape +px ) {
+			width: 75%;
+		}
+		
+		@media screen and ( max-width: $tablet_landscape - 1 +px ) {
+			display: block;
+			width: 100%;
+			
+			.o-layout__item {
+				//width: 100%;
+				
+				.o-box {
+					//float: left;
+					//width: 50%;
+				}
+			}
+		}
+	
+		.owl-item {
+			.o-layout__item {
+				width: 100%;
+				
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,54 @@
+#newsletter {
+	
+	p {
+		line-height: 1.4;
+	}
+	
+	form {
+		position: relative;
+	}
+
+	input[type=email] {
+		@include hover;
+		position: relative; z-index: 5;
+		height: 42px;
+		border: {
+			bottom: 3px solid $color-gray-iron;
+			top: 3px solid $color-gray-iron;
+		}
+		padding-right: 20px;
+		font-weight: $font-weight-bold;
+		text-transform: uppercase;
+		color: $color-page-text;
+	}
+	
+	button[type=submit] {
+		@include hover;
+		position: absolute;
+		right: 0; top: 0;
+		z-index: 10;
+		width: 20px;
+		height: 42px;
+
+		&:after {
+			font-weight: $font-weight-bold;
+			color: $color-blue-curious;
+			content: '→';
+		}
+		
+		&:hover {
+			right: -5px;
+		}
+	}
+	
+	.error {
+		input[type=email] {
+			border-color: $color-error;
+		}
+	}
+
+	@include input-placeholder {		
+		color: $color-blue-curious;
+	}
+	
+}

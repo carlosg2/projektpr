@@ -1,0 +1,17 @@
+.o-wrapper {
+	@include hover;
+	max-width: 768px;
+    margin: 0 auto;
+    
+    @media screen and ( min-width: $tablet_landscape+px ) {
+    	max-width: $grid-base-width+px;
+    }
+    
+    @media screen and ( max-width: $tablet_portrait+px ) {
+    	max-width: 600px;
+    }
+    
+	@media screen and ( max-width: $break_small+px ) {
+    	max-width: 300px;
+    }
+}

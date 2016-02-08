@@ -1,0 +1,29 @@
+@mixin antialias {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin gradient( $start, $stop: darken( $start, 8% ), $dir: top ){
+	$experimental-support-for-svg: true;
+	@include background( linear-gradient( 90deg, $start, $stop ) );
+	@include filter-gradient($start, $stop, $dir);
+}
+
+@mixin hover {
+	@include transition-property(all);
+	@include transition-duration(300ms);
+	@include transition-timing-function(ease-in-out);
+}
+
+@mixin input-placeholder($selector: "") {
+	@if $experimental-support-for-webkit {
+		#{$selector}::-webkit-input-placeholder { @content; }
+	}
+	@if $experimental-support-for-mozilla {
+		#{$selector}:-moz-placeholder { @content; }
+	}
+	@if $experimental-support-for-microsoft {
+		#{$selector}:-ms-input-placeholder { @content; }
+	}
+}
+

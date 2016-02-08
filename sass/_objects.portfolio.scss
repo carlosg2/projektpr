@@ -1,0 +1,146 @@
+#portfolio {
+
+	.bg-white,
+	.bg-gray {
+		h2 {
+			color: #bec8cc;
+		}
+	}
+	
+	.o-layout__item {
+		&:first-of-type {
+			.o-layout__item {
+				&:last-of-type {
+					@media screen and ( max-width: $tablet_landscape - 1 + px ) {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	.owl-nav {
+		left: auto;
+		right: -45%;
+		
+		@media screen and ( max-width: $tablet_landscape - 1 + px ) {
+			left: 40px;
+			right: auto;
+			bottom: -270px;
+		}
+		
+		@media screen and ( max-width: $break_small+px ) {
+	    	display: none;
+	    }
+	}
+	
+	.o-portfolio__proloque {
+		width: grid(300, 900);
+		
+		@media screen and ( max-width: $tablet_landscape - 1 + px ) {
+			width: 100%;
+		}
+	}
+	
+	.o-portfolio__photo {
+		z-index: 10;
+		width: grid(600, 900);
+		overflow: hidden;
+		cursor: pointer;
+		
+		@media screen and ( max-width: $tablet_landscape - 1 + px ) {
+			width: 100%;
+			height: 600px;
+		}
+		
+		@media screen and ( max-width: $break_small+px ) {
+			display: none;
+		}
+		
+		.o-media {
+			@media screen and ( min-width: $tablet_landscape+px ) {
+				@include transition-property(all);
+				@include transition-duration(6s);
+				@include transition-timing-function(ease-in-out);
+			}
+		}
+		
+		&:hover {
+			.o-media {
+				@media screen and ( min-width: $tablet_landscape+px ) {
+					@include transform(scale(1.1));
+				}				
+			}
+		}
+	}
+	
+	.o-portfolio__details {
+		position: absolute; right: 0; top: 0; z-index: 5;
+		width: grid(600, 900);
+		
+		@media screen and ( max-width: $tablet_landscape - 1 + px ) {
+		    width: 100%;
+		    top: 300px;
+		}
+		
+		@media screen and ( max-width: $break_small+px ) {
+			position: relative;
+			right: auto; top: auto;
+			height: auto;
+		}
+		
+		&.active {
+			z-index: 15;
+		}
+		
+		.o-layout__item {
+			@media screen and ( min-width: $break_small + 1 + px ) {
+				@include hover;
+				@include transform(rotateY(180deg));
+				@include transition-duration(600ms);
+				@include opacity(0);
+				width: grid(300, 600);
+	
+				&:nth-of-type(2) {
+					@include transition-delay(300ms);
+				}
+				
+				&:nth-of-type(3) {
+					@include transition-delay(600ms);
+				}
+				
+				&:nth-of-type(4) {
+					@include transition-delay(900ms);
+				}
+				
+				&.active {
+					@include opacity(1);
+					@include transform(rotateY(0));
+					@include transform(perspective(300));
+				}
+			}
+		}		
+	}	
+
+	.owl-carousel {
+		@media screen and ( max-width: $tablet_landscape - 1 + px ) {
+			width: 100%;
+		}
+		
+		@media screen and ( max-width: $break_small+px ) {
+			display: block;
+		}
+	}
+
+	.show-details {
+		@media screen and ( max-width: $tablet_landscape - 1 + px ) {
+		    position: absolute;
+		    right: 40px;
+		    bottom: 0;
+		}
+		
+		@media screen and ( max-width: $break_small+px ) {
+			display: none;
+		}
+	}
+}

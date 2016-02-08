@@ -1,0 +1,15 @@
+h2 {
+	font-size: em(60);
+}
+
+h3 {
+	font-size: em(30);
+	
+	@media screen and ( min-width: 1024px ) and ( max-width: 1120px ) {
+		font-size: em(26);
+	}
+}
+
+h4 {
+	font-size: em(18);
+}

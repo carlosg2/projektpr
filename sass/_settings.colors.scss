@@ -1,0 +1,49 @@
+$color-blue-curious:			#2ba3e1;
+$color-fiord:					#485668;
+$color-gray:					#6a6a6a;
+$color-gray-hit:				#a0aeb3;
+$color-gray-iron:				#d0d7da;
+$color-gray-oslo:				#80898c;
+$color-porcelain:				#e5eaec;
+$color-purple:					#6f2c67;
+$color-red:						#D8000C;
+$color-yellow:					#f6d51e;
+
+
+// Reassign literal variables to meaningful ones.
+
+$color-error:					$color-red;
+
+$color-hamburger:				$color-purple;
+
+$color-page-text:				$color-gray;
+$color-page-background:			$color-porcelain;
+$color-page-footer-text:		$color-gray-hit;
+$color-page-footer-link:		$color-blue-curious;
+$color-page-head:				$color-fiord;
+
+$color-nav-primary-background:	$color-porcelain;
+
+$color-caption-background:		$color-blue-curious;
+$color-caption-text:			white;
+
+$color-links:					inherit;
+
+$color-blue-background:			$color-blue-curious;
+$color-blue-text:				white;
+
+$color-gray-background:			$color-porcelain;
+$color-gray-text:				$color-gray-oslo;
+
+$color-purple-background:		$color-purple;
+$color-purple-text:				white;
+
+$color-yellow-background:		$color-yellow;
+$color-yellow-text:				white;
+
+$color-white-background:		white;
+$color-white-text:				$color-gray-oslo;
+
+$color-navsocial-background:	$color-yellow;
+$color-navsocial-text:			$color-blue-curious;
+

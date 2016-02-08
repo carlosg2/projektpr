@@ -1,0 +1,41 @@
+.o-page-footer {
+    padding: 90px 0;
+    background-color: $color-page-background;
+    color: $color-page-footer-text;
+    
+    @media screen and ( max-width: $tablet_landscape - 1 + px ) {
+		padding: 40px;
+	}
+	
+	@media screen and ( max-width: $break_small+px ) {
+		padding: 40px 20px;
+	}
+    
+    a {
+    	color: $color-page-footer-link;
+
+	    &:hover {
+			text-decoration: underline;
+	    }
+    }
+    
+    .o-page-footer__copyrights {
+    	margin-bottom: 10px;
+
+    	@media screen and ( min-width: $tablet_landscape + px ) {
+		    float: left;
+		    margin: 0;
+	    }
+    }
+    
+    .o-page-footer__author {
+		font: {
+			size: em(14);
+			weight: $font-weight-medium;
+		}
+		
+		@media screen and ( min-width: $tablet_landscape + px ) {
+	    	float: right;
+	    }
+    }
+}

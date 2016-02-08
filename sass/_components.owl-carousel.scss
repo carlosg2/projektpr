@@ -1,0 +1,17 @@
+.owl-carousel {
+	float: left;
+	@include opacity(0);
+
+	.owl-item {
+		-webkit-backface-visibility: hidden;
+		-webkit-transform: translateZ(0) scale(1.0, 1.0);
+
+		img {
+			width: auto;
+		}
+
+		.width-sm {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,11 @@
+#clients {
+	.owl-carousel {
+		@media screen and ( max-width: $tablet_landscape - 1 + px ) {
+			width: 50%;
+		}
+		
+		@media screen and ( max-width: $break_small+px ) {
+	    	width: 100%;
+	    }
+	}
+}

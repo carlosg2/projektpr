@@ -1,0 +1,28 @@
+.o-box {
+	position: relative;
+	height: 100%;
+	padding: 35px 40px;
+	
+	@media screen and ( max-width: $break_small+px ) {
+		padding: 30px 25px;
+	}
+
+	.o-box__content-bottom {
+		position: absolute;
+		left: 40px;
+		bottom: 35px;
+		
+		@media screen and ( max-width: $break_small+px ) {
+			left: 25px;
+			bottom: 30px;
+		}
+	}
+	
+	.o-box__dots {
+		background-size: 18px 18px;
+	}
+	
+	p {
+		margin-bottom: 2em;
+	}
+}

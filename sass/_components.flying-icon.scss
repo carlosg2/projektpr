@@ -1,0 +1,34 @@
+.c-flying-icon {
+	position: absolute; 
+	width: 56px; height: 56px;
+	
+	@media screen and ( max-width: $break_small+px ) {
+		display: none !important;
+	}
+	
+	&.right-top {
+		top: -28px;
+		left: grid(450, $grid-base-width/2);
+	}
+	
+	&.right-bottom {
+		bottom: 35px;
+		right: -28px;
+	}
+	
+	&.left-bottom {
+		left: -28px;
+		bottom: 35px;
+		display: none;
+		
+		@media screen and ( max-width: $tablet_landscape - 1 +px ) {
+			display: block;
+		}
+	}
+	
+	&.left-middle {
+		left: -28px;
+		top: 50%;
+		margin-top: -16px;
+	}
+}

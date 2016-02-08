@@ -1,0 +1,32 @@
+#team {	
+	.o-media {
+		@media screen and ( min-width: $tablet_landscape+px ) {
+			@include transition-property(all);
+			@include transition-duration(6s);
+			@include transition-timing-function(ease-in-out);
+		}
+	}
+	
+	.o-layout__item {	
+		overflow: hidden;
+
+		&:hover {
+			.c-caption {
+				@include opacity(1);
+				bottom: 0;
+			}
+			
+			.o-media {
+				@media screen and ( min-width: $tablet_landscape+px ) {
+					@include transform(scale(1.1));
+				}				
+			}
+		}
+	}
+	
+	.vertical-photo {
+		@media screen and ( max-width: $tablet_landscape - 1 + px ) {
+			display: none;
+		}
+	}
+}

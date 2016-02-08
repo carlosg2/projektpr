@@ -1,0 +1,15 @@
+#about {
+	.o-about__proloque {
+		float: right;
+	}
+
+	.owl-nav {
+		@media screen and ( max-width: $tablet_landscape - 1 + px ) {
+			display: none;
+		}
+	}
+	
+	.photo {
+		overflow: hidden;
+	}
+}

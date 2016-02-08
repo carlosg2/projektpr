@@ -1,0 +1,18 @@
+@mixin font-face-db( $font-name, $font-filename, $font-weight ){
+  @font-face {
+    font-family: $font-name;
+    src: url('../fonts/' + $font-filename + '.eot');
+    src: url('../fonts/' + $font-filename + '.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/' + $font-filename + '.woff') format('woff'),
+         url('../fonts/' + $font-filename + '.ttf') format('truetype'),
+         url('../fonts/' + $font-filename + '.svg#' + $font-filename ) format('svg');
+    font-weight: $font-weight; font-style: normal;
+  }
+}
+
+//@import url( "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,700,300&subset=latin,latin-ext" );
+@include font-face-db( 'MarkPro', 'MarkPro-Medium', $font-weight-medium);
+@include font-face-db( 'MarkPro', 'MarkPro-Bold', $font-weight-bold);
+@include font-face-db( 'MarkPro', 'MarkPro-Normal', $font-weight-normal);
+@include font-face-db( 'MarkPro', 'MarkPro-Book', $font-weight-book);
+@include font-face-db( 'icomoon', 'icomoon', normal);

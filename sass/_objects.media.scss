@@ -1,0 +1,27 @@
+.o-media {
+	position: relative; z-index: 5;
+	
+	@media screen and ( max-width: $tablet_landscape+px ) {
+		width: 100%;
+	}
+	
+	&.crop {
+		@media screen and ( max-width: $tablet_landscape - 1 +px ) {
+			position: absolute;
+		    left: 50%;
+		    top: 50%;
+		    width: 100%;
+			height: auto;
+		    -webkit-transform: translate(-50%,-50%);
+		        -ms-transform: translate(-50%,-50%);
+		            transform: translate(-50%,-50%);
+		}
+		
+		@media screen and ( max-width: 600px ) {
+			width: auto;
+			height: 100%;
+			max-width: none;
+		}
+	}
+	
+}

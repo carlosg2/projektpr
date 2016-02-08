@@ -1,0 +1,52 @@
+/*
+ * Size of boxes
+ *
+ */
+ 
+.width-md {
+	width: 100% !important;
+
+	@media screen and ( min-width: $tablet_landscape+px ) {
+		width: 50% !important;
+	}
+}
+/*
+
+.height-sm {
+	height: 300px;
+
+	@media screen and ( min-width: $tablet_landscape+px ) {
+		height: 25vw;
+		max-height: 300px;
+	}
+}
+*/
+
+.height-md {
+	height: 300px;
+	
+	@media screen and ( min-width: $tablet_landscape+px ) {
+		height: 50vw !important;
+		max-height: 600px !important;
+	}
+	
+	&.height-static {
+		@media screen and ( max-width: $tablet_landscape - 1 +px ) {
+			height: 600px !important;
+			
+			.o-layout__item {
+				width: 100% !important;
+			}
+		}
+	}
+	
+	#about &,
+	#team &,
+	#portfolio & {
+		@media screen and ( max-width: $tablet_landscape - 1 +px ) {
+			@include clearfix;
+			float: none !important;
+			width: 100% !important;
+		}
+	}
+}

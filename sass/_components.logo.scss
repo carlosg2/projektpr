@@ -1,0 +1,15 @@
+.c-logo {
+	@include hover;
+	@include scut-center-transform(y);
+	left: grid(40);
+	display: inline-block;
+	width: 160px; height: 35px;
+	
+	@media screen and ( max-width: $tablet_portrait+px ) {
+		width: 120px;
+	}
+	
+	.low & {
+		width: 120px;
+	}
+}

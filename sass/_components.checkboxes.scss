@@ -1,0 +1,41 @@
+.ui-radio-state-disabled,
+.ui-radio-state-checked-disabled,
+.ui-radio-state-disabled-hover,
+.ui-radio-state-checked-disabled-hover { color: #999; }
+
+span.ui-checkbox,
+span.ui-radio {
+	display: block;
+	float: left;
+	width: 21px; height: 21px;
+} // checkbox off
+
+span.ui-radio {
+	background-position: 0 -71px;
+} // radio off
+
+span.ui-helper-hidden {
+	display: none;
+}
+
+span.ui-checkbox-state-checked {
+	background-position: 0 0;
+} // checkbox on
+
+span.ui-checkbox-state-checked-hover {
+	background-position: 0 0;
+}
+
+span.ui-radio-state-checked-disabled {
+	background-position: 0 -161px;
+}
+
+span.ui-radio-state-checked,
+span.ui-radio-state-checked-hover {
+	background-position: 0 -200px !important;
+} // radio on
+
+.ui-helper-hidden-accessible {
+	position: absolute;
+	left: -999em;
+}

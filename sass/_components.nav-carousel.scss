@@ -1,0 +1,51 @@
+.owl-nav {
+	position: absolute; left: grid(40, 300); bottom: 35px;
+	
+	@media screen and ( max-width: $tablet_landscape - 1 +px ) {
+		left: 40px;
+	}
+
+	div {
+		@include border-radius(50%)	;
+		@include hover;
+		width: 40px; height: 40px;
+		display: inline-block;
+		margin-right: 6px;
+		border: {
+			width: 1px;
+			style: solid;
+			color: inherit;
+		}
+		text-align: center;
+		cursor: pointer;
+
+		&:after {
+			
+		    text-align: center;
+		    line-height: 34px;
+		}
+
+		&.owl-prev {
+			&:after {
+				content: '←';
+			}
+		}
+		
+		&.owl-next {
+			&:after {
+				display: block;
+				content: '→';
+			}
+		}
+		
+		&:hover {
+			.desktop & {
+				@include transform(scale(1.2));
+			}
+		}
+		
+		&:active {
+			@include transform(scale(1.1));
+		}	
+	}
+}

@@ -1,0 +1,240 @@
+/*
+ * Background and related text colors
+ *
+ */
+
+.bg-blue {
+	background-color: $color-blue-background;
+	color: $color-blue-text;
+	
+	.o-headline {
+		h4 {
+			background-color: $color-blue-background;
+		}
+	}
+
+	.o-box__dots {
+		background: {
+			image: url(../img/dot-white.svg);
+		}
+	}
+	
+	.o-box__details-holder {
+		.smart-object {
+			.item1, .item2 {
+				background-color: lighten($color-blue-background, 50%);
+			}
+		}
+	}
+	
+	.show-description & {
+		.o-box__details-holder {
+			.smart-object {
+				.item1, .item2 {
+					background-color: $color-blue-background;
+				}
+			}
+		}
+	}
+}
+
+.bg-gray {
+	background-color: $color-gray-background;
+	color: $color-gray-text;
+	
+	.o-headline {
+		h4 {
+			background-color: $color-gray-background;
+		}
+	}
+
+	.o-box__dots {
+		background: {
+			image: url(../img/dot-white.svg);
+		}
+	}
+	
+	.o-box__details-holder {
+		.smart-object {
+			.item1, .item2 {
+				background-color: lighten($color-gray-background, 50%);
+			}
+		}
+	}
+	
+	.show-description & {
+		.o-box__details-holder {
+			.smart-object {
+				.item1, .item2 {
+					background-color: $color-gray-background;
+				}
+			}
+		}
+	}
+}
+
+.bg-purple {
+	background-color: $color-purple-background;
+	color: $color-purple-text;
+	
+	.o-headline {
+		h4 {
+			background-color: $color-purple-background;
+		}
+	}
+
+	.o-box__dots {
+		background-image: url(../img/dot-yellow.svg);
+	}
+	
+	.o-box__details-holder {
+		.smart-object {
+			.item1, .item2 {
+				background-color: lighten($color-purple-background, 50%);
+			}
+		}
+	}
+	
+	.show-description & {
+		.o-box__details-holder {
+			.smart-object {
+				.item1, .item2 {
+					background-color: $color-purple-background;
+				}
+			}
+		}
+	}
+}
+
+.bg-white {
+	background-color: $color-white-background;
+	color: $color-white-text;
+	
+	.o-headline {
+		h4 {
+			background-color: $color-white-background;
+		}
+	}
+
+	.o-box__dots {
+		background-image: url(../img/dot-gray-dark.svg);
+	}
+	
+	.o-box__details-holder {
+		.smart-object {
+			.item1, .item2 {
+				background-color: darken($color-white-background, 50%);
+			}
+		}
+	}
+	
+	.show-description & {
+		.o-box__details-holder {
+			.smart-object {
+				.item1, .item2 {
+					background-color: $color-white-background;
+				}
+			}
+		}
+	}
+}
+
+.bg-yellow {
+	background-color: $color-yellow-background;
+	color: $color-yellow-text;
+	
+	.o-headline {
+		h4 {
+			background-color: $color-yellow-background;
+		}
+	}
+
+	.o-box__dots {
+		background-image: url(../img/dot-white.svg);
+	}
+	
+	.o-box__details-holder {
+		.smart-object {
+			.item1, .item2 {
+				background-color: lighten($color-yellow-background, 50%);
+			}
+		}
+	}
+	
+	.show-description & {
+		.o-box__details-holder {
+			.smart-object {
+				.item1, .item2 {
+					background-color: $color-yellow-background;
+				}
+			}
+		}
+	}
+}
+
+
+/*
+ * Size of boxes
+ *
+ */
+ 
+.width-md {
+	width: 50%;
+}
+
+.width-sm {
+	width: 25%;
+}
+
+.height-sm {
+	height: 25vw;
+	max-height: 300px;
+}
+
+.height-md {
+	height: 50vw;
+	max-height: 600px;
+}
+
+
+/*
+ * Font weight
+ *
+ */
+
+.weight-book {
+	font-weight: $font-weight-book;
+}
+
+.weight-medium {
+	font-weight: $font-weight-medium;
+}
+
+
+
+/*
+ * Shared
+ *
+ */
+
+body {
+	padding-top: 140px;
+	
+	@media screen and ( max-width: $tablet_portrait+px ) {
+		padding-top: 90px;
+	}
+}
+
+.empty {
+	@media screen and ( max-width: $tablet_landscape - 1 + px ) {
+		display: none;
+	}
+}
+
+.index-up {
+	z-index: 10 !important;
+}
+
+.push-right {
+	float: right !important;
+}

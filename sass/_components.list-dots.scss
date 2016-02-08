@@ -1,0 +1,25 @@
+.list-dots {
+	li {
+		position: relative;
+		margin-bottom: 10px;
+		padding-left: 25px;
+
+		&:before {
+			@include border-radius(50%);
+			position: absolute;
+			left: 0; top: 5px;
+			display: block;
+			width: 10px; height: 10px;
+			background-color: $color-yellow;
+			content: ' ';
+		}
+		
+		a {
+			color: $color-blue-curious;
+			
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

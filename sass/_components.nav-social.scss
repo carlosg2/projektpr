@@ -1,0 +1,29 @@
+.c-nav-social {
+	li {
+		float: left;
+		padding-right: grid(15, 300);
+		
+		&:last-child {
+			padding: 0;
+		}
+
+		a {
+			@include hover;
+			@include border-radius(50%);
+			display: inline-block;
+			width: 36px; height: 36px;
+			background-color: $color-navsocial-background;
+			text-align: center;
+			line-height: 36px;
+			color: $color-navsocial-text;
+			
+			&:hover {
+				@include transform(scale(1.2));
+			}
+			
+			&:active {
+				@include transform(scale(1.1));
+			}			
+		}
+	}
+}

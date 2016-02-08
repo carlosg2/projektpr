@@ -1,0 +1,54 @@
+.c-nav-primary {
+
+	@media screen and ( min-width: 769px ) {
+		@include scut-center-transform(y);
+		display: block;
+		right: 25px;
+		
+		li {
+			display: inline-block;
+			padding: 0 15px;
+	
+			a {
+				@include hover;
+			}
+		}
+	}
+
+	a {
+		font-weight: $font-weight-medium;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait+px ) {
+		@include opacity(0);
+		@include hover;
+		@include transition-property(all);
+		position: absolute;
+		left: -100%;
+		top: 180px;
+		width: 100%;
+		background-color: $color-nav-primary-background;
+				
+		a {
+			display: block;
+			padding: 10px 24px;
+		}
+		
+		li {
+			&:last-child {
+				a {
+					padding-bottom: 25px;
+				}
+				
+			}
+		}
+		
+		&.active {
+			@include opacity(1);
+			display: block;
+			left: 0;
+		}
+	}
+	
+	
+}

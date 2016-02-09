@@ -13,13 +13,13 @@
 		}
 	}
 
-	.o-box__dots {
+	.c-dots__bg {
 		background: {
 			image: url(../img/dot-white.svg);
 		}
 	}
 	
-	.o-box__details-holder {
+	.c-description {
 		.smart-object {
 			.item1, .item2 {
 				background-color: lighten($color-blue-background, 50%);
@@ -28,7 +28,7 @@
 	}
 	
 	.show-description & {
-		.o-box__details-holder {
+		.c-description {
 			.smart-object {
 				.item1, .item2 {
 					background-color: $color-blue-background;
@@ -48,13 +48,13 @@
 		}
 	}
 
-	.o-box__dots {
+	.c-dots__bg {
 		background: {
 			image: url(../img/dot-white.svg);
 		}
 	}
 	
-	.o-box__details-holder {
+	.c-description {
 		.smart-object {
 			.item1, .item2 {
 				background-color: lighten($color-gray-background, 50%);
@@ -63,7 +63,7 @@
 	}
 	
 	.show-description & {
-		.o-box__details-holder {
+		.c-description {
 			.smart-object {
 				.item1, .item2 {
 					background-color: $color-gray-background;
@@ -83,11 +83,11 @@
 		}
 	}
 
-	.o-box__dots {
+	.c-dots__bg {
 		background-image: url(../img/dot-yellow.svg);
 	}
 	
-	.o-box__details-holder {
+	.c-description {
 		.smart-object {
 			.item1, .item2 {
 				background-color: lighten($color-purple-background, 50%);
@@ -96,7 +96,7 @@
 	}
 	
 	.show-description & {
-		.o-box__details-holder {
+		.c-description {
 			.smart-object {
 				.item1, .item2 {
 					background-color: $color-purple-background;
@@ -116,11 +116,11 @@
 		}
 	}
 
-	.o-box__dots {
+	.c-dots__bg {
 		background-image: url(../img/dot-gray-dark.svg);
 	}
 	
-	.o-box__details-holder {
+	.c-description {
 		.smart-object {
 			.item1, .item2 {
 				background-color: darken($color-white-background, 50%);
@@ -129,7 +129,7 @@
 	}
 	
 	.show-description & {
-		.o-box__details-holder {
+		.c-description {
 			.smart-object {
 				.item1, .item2 {
 					background-color: $color-white-background;
@@ -149,11 +149,11 @@
 		}
 	}
 
-	.o-box__dots {
+	.c-dots__bg {
 		background-image: url(../img/dot-white.svg);
 	}
 	
-	.o-box__details-holder {
+	.c-description {
 		.smart-object {
 			.item1, .item2 {
 				background-color: lighten($color-yellow-background, 50%);
@@ -162,7 +162,7 @@
 	}
 	
 	.show-description & {
-		.o-box__details-holder {
+		.c-description {
 			.smart-object {
 				.item1, .item2 {
 					background-color: $color-yellow-background;

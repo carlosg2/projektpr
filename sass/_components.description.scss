@@ -1,0 +1,56 @@
+.c-description {
+	@include backface-visibility(hidden);
+	@include transform(translate3d(0, 0, 0));
+	@include transform-style(flat)
+	position: absolute; top: 0; left: 0; z-index: 20;
+	width: 100%; height: 100%;
+	
+	.smart-object {
+		@include hover;
+		@include transition-duration(600ms);
+		@include backface-visibility(hidden);
+		@include transform(translate3d(0, 0, 0));
+		@include transform-style(flat);
+		@include transform-origin( 0% 60% 0px );
+		position: relative; 
+		pointer-events: none; 
+		width: 100%; height: 100%; 
+		overflow: hidden;
+		
+		&.item1 {
+			@include transform(translate3d(520px, -150px, 0) rotate(-30deg));
+			position: absolute; 
+			height: 550px; 
+		}
+		
+		&.item2 {
+			@include transform(translate3d(-520px, 0, 0) rotate(-30deg));
+			position: absolute;
+			height: 400px; 
+		}
+		
+		&.txt {
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%;  height: 100%;
+			padding: 35px 40px;
+			opacity: 0;
+		}
+	}
+	
+	.show-description & {
+		.smart-object {
+			.item1 {
+				@include transform(translate3d(150px, -150px, 0) rotate(-30deg));
+			}
+			
+			.item2 {
+				@include transform(translate3d(-90px, 0, 0) rotate(-30deg));
+			}
+			
+			.txt {
+				@include opacity(1);
+			}
+		}
+	}
+}

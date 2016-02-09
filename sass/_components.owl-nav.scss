@@ -1,9 +1,6 @@
 .owl-nav {
-	position: absolute; left: grid(40, 300); bottom: 35px;
-	
-	@media screen and ( max-width: $tablet_landscape - 1 +px ) {
-		left: 40px;
-	}
+	position: absolute;
+	left: 40px; bottom: 35px;
 
 	div {
 		@include border-radius(50%)	;
@@ -18,6 +15,7 @@
 		}
 		text-align: center;
 		cursor: pointer;
+		color: white;
 
 		&:after {
 			

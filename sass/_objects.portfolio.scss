@@ -7,34 +7,7 @@
 		}
 	}
 	
-	.o-layout__item {
-		&:first-of-type {
-			.o-layout__item {
-				&:last-of-type {
-					@media screen and ( max-width: $tablet_landscape - 1 + px ) {
-						width: 100%;
-					}
-				}
-			}
-		}
-	}
-
-	.owl-nav {
-		left: auto;
-		right: -45%;
-		
-		@media screen and ( max-width: $tablet_landscape - 1 + px ) {
-			left: 40px;
-			right: auto;
-			bottom: -270px;
-		}
-		
-		@media screen and ( max-width: $break_small+px ) {
-	    	display: none;
-	    }
-	}
-	
-	.o-portfolio__proloque {
+	.proloque {
 		width: grid(300, 900);
 		
 		@media screen and ( max-width: $tablet_landscape - 1 + px ) {
@@ -42,7 +15,7 @@
 		}
 	}
 	
-	.o-portfolio__photo {
+	.photo {
 		z-index: 10;
 		width: grid(600, 900);
 		overflow: hidden;
@@ -74,7 +47,7 @@
 		}
 	}
 	
-	.o-portfolio__details {
+	.details {
 		position: absolute; right: 0; top: 0; z-index: 5;
 		width: grid(600, 900);
 		
@@ -120,7 +93,13 @@
 				}
 			}
 		}		
-	}	
+	}
+	
+	.lead {
+		@media screen and ( max-width: $tablet_landscape - 1 + px ) {
+			width: 100%;
+		}
+	}
 
 	.owl-carousel {
 		@media screen and ( max-width: $tablet_landscape - 1 + px ) {
@@ -130,13 +109,26 @@
 		@media screen and ( max-width: $break_small+px ) {
 			display: block;
 		}
+
+		
 	}
+	
+	.owl-nav {
+			@media screen and ( max-width: $tablet_landscape - 1 + px ) {
+				top: 230px;
+				bottom: auto;
+			}
+			
+			@media screen and ( max-width: $break_small+px ) {
+		    	display: none;
+		    }
+		}
 
 	.show-details {
 		@media screen and ( max-width: $tablet_landscape - 1 + px ) {
 		    position: absolute;
 		    right: 40px;
-		    bottom: 0;
+		    bottom: 5px;
 		}
 		
 		@media screen and ( max-width: $break_small+px ) {

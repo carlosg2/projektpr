@@ -48,7 +48,8 @@
 	}
 	
 	.details {
-		position: absolute; right: 0; top: 0; z-index: 5;
+		display: none;
+		position: absolute; right: 0; top: 0; z-index: 15;
 		width: grid(600, 900);
 		
 		@media screen and ( max-width: $tablet_landscape - 1 + px ) {
@@ -63,34 +64,14 @@
 		}
 		
 		&.active {
-			z-index: 15;
+			display: block;
 		}
 		
 		.o-layout__item {
 			@media screen and ( min-width: $break_small + 1 + px ) {
-				@include hover;
 				@include transform(rotateY(180deg));
-				@include transition-duration(600ms);
-				@include opacity(0);
+				@include opacity(0);				
 				width: grid(300, 600);
-	
-				&:nth-of-type(2) {
-					@include transition-delay(300ms);
-				}
-				
-				&:nth-of-type(3) {
-					@include transition-delay(600ms);
-				}
-				
-				&:nth-of-type(4) {
-					@include transition-delay(900ms);
-				}
-				
-				&.active {
-					@include opacity(1);
-					@include transform(rotateY(0));
-					@include transform(perspective(300));
-				}
 			}
 		}		
 	}

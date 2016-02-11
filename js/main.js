@@ -327,33 +327,88 @@ jQuery(function($) {
 				var el = $('#portfolio .show-details a'),
 					show_txt = el.attr('data-show'),
 					hide_txt = el.attr('data-hide'),
-					photo = $('.photo');
+					photo = $('.photo'), pause, pauseOut, details, d, d_init = 300, i, item, items_num, show_details_link;
+					
+				function hideDetails(obj) {
+					details = obj.parents('.o-portfolio__item').find('.details'),
+					item = $('.o-layout__item', details),
+					items_num = item.length, i = 0, d = d_init,
+					show_details_link = obj.parents('.o-portfolio__item').find('.show-details a');
+
+					clearTimeout(pause);
+
+					item.each(function() {
+						var _t = $(this);
+						
+						_t.stop();							
+	
+						pauseOut = setTimeout(function() {
+						
+							_t.stop().transition({
+								opacity: 0,
+								rotateY: '180deg',
+								perspective: '300px',
+								duration: 600
+							}, function() {
+								i ++;
+								if (i == items_num) {
+									details.removeClass('active');
+								}
+							});
+						}, d);
+
+						d += 300;
+					});
+
+					show_details_link.html(show_txt).removeClass('active');
+				}
+				
+				function showDetails(obj) {
+					details = obj.parents('.o-portfolio__item').find('.details'),
+					item = $('.o-layout__item', details),
+					items_num = item.length, i = 0, d = d_init,
+					show_details_link = obj.parents('.o-portfolio__item').find('.show-details a');
+
+					clearTimeout(pauseOut);
+
+					item.each(function() {
+						var _t = $(this);
+						
+						pause = setTimeout(function() {
+						
+							if (details.not('.active')) {
+								details.addClass('active');
+							}
+							
+							_t.stop().transition({
+								opacity: 1,
+								rotateY: '0',
+								perspective: '300px',
+								duration: 600
+							});
+	
+						}, d);
+						
+						d += 300;	
+					});						
+
+					show_details_link.html(hide_txt).addClass('active');
+				}
+				
 				el.on('click', function(e) {
 					e.preventDefault();
-					var details = $(this).parents('.o-portfolio__item').find('.details');
+					details = $(this).parents('.o-portfolio__item').find('.details'),
+					item = $('.o-layout__item', details);
 					
 					if ($(this).hasClass('active')) {
-						$('.o-layout__item', details).removeClass('active');
-						$(this).html(show_txt).removeClass('active');
-						
-						setTimeout(function() {
-							details.removeClass('active');
-						}, 2000);
-						
+						hideDetails($(this));
 					} else {
-						details.addClass('active');
-						$('.o-layout__item', details).addClass('active');
-						$(this).html(hide_txt).addClass('active');
+						showDetails($(this));
 					}
 				});
 				
 				photo.on('click', function() {
-					var show_details = $(this).parents('.o-portfolio__item').find('.show-details a'),
-						details = $(this).parents('.o-portfolio__item').find('.details');
-					
-						details.addClass('active');
-						$('.o-layout__item', details).addClass('active');
-						show_details.html(hide_txt).addClass('active');					
+					showDetails($(this));
 				});
 			}
 			startOwl();

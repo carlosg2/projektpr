@@ -735,10 +735,11 @@ img {
       transform: scale(1.1); } }
 
 #portfolio .details {
+  display: none;
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 5;
+  z-index: 15;
   width: 66.66667%; }
   @media screen and (max-width: 1023px) {
     #portfolio .details {
@@ -751,61 +752,17 @@ img {
       top: auto;
       height: auto; } }
   #portfolio .details.active {
-    z-index: 15; }
+    display: block; }
   @media screen and (min-width: 601px) {
     #portfolio .details .o-layout__item {
-      -webkit-transition-property: all;
-      -moz-transition-property: all;
-      -o-transition-property: all;
-      transition-property: all;
-      -webkit-transition-duration: 300ms;
-      -moz-transition-duration: 300ms;
-      -o-transition-duration: 300ms;
-      transition-duration: 300ms;
-      -webkit-transition-timing-function: ease-in-out;
-      -moz-transition-timing-function: ease-in-out;
-      -o-transition-timing-function: ease-in-out;
-      transition-timing-function: ease-in-out;
       -webkit-transform: rotateY(180deg);
       -moz-transform: rotateY(180deg);
       -ms-transform: rotateY(180deg);
       -o-transform: rotateY(180deg);
       transform: rotateY(180deg);
-      -webkit-transition-duration: 600ms;
-      -moz-transition-duration: 600ms;
-      -o-transition-duration: 600ms;
-      transition-duration: 600ms;
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
       opacity: 0;
-      width: 50%; }
-      #portfolio .details .o-layout__item:nth-of-type(2) {
-        -webkit-transition-delay: 300ms;
-        -moz-transition-delay: 300ms;
-        -o-transition-delay: 300ms;
-        transition-delay: 300ms; }
-      #portfolio .details .o-layout__item:nth-of-type(3) {
-        -webkit-transition-delay: 600ms;
-        -moz-transition-delay: 600ms;
-        -o-transition-delay: 600ms;
-        transition-delay: 600ms; }
-      #portfolio .details .o-layout__item:nth-of-type(4) {
-        -webkit-transition-delay: 900ms;
-        -moz-transition-delay: 900ms;
-        -o-transition-delay: 900ms;
-        transition-delay: 900ms; }
-      #portfolio .details .o-layout__item.active {
-        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-        opacity: 1;
-        -webkit-transform: rotateY(0);
-        -moz-transform: rotateY(0);
-        -ms-transform: rotateY(0);
-        -o-transform: rotateY(0);
-        transform: rotateY(0);
-        -webkit-transform: perspective(300);
-        -moz-transform: perspective(300);
-        -ms-transform: perspective(300);
-        -o-transform: perspective(300);
-        transform: perspective(300); } }
+      width: 50%; } }
 
 @media screen and (max-width: 1023px) {
   #portfolio .lead {

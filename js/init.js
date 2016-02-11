@@ -14,6 +14,3 @@ if (head.browser.ie && parseFloat(head.browser.version) < 9) {
     	.js('https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js')
     	.js('https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js');
 }
-
-
-/* https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.0/js.cookie.min.js */

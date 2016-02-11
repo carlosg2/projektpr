@@ -9,7 +9,8 @@ gulp.task('sass', function()
 {
     return gulp.src('sass/**/*.scss')
       .pipe(sass({ importer: compass }).on('error', sass.logError))
-      .pipe(gulp.dest('./css')); // .pipe(sass({outputStyle: 'compressed'}))
+      .pipe(sass({outputStyle: 'compressed'}))
+      .pipe(gulp.dest('./css'));
 
 });
  

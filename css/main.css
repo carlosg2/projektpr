@@ -777,7 +777,9 @@ img {
     display: block; } }
 
 #portfolio .owl-nav div {
-  color: white; }
+  border-color: white; }
+  #portfolio .owl-nav div:after {
+    color: white; }
 
 @media screen and (max-width: 1023px) {
   #portfolio .owl-nav {

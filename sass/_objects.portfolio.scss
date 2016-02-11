@@ -37,7 +37,7 @@
 				@include transition-timing-function(ease-in-out);
 			}
 		}
-		
+
 		&:hover {
 			.o-media {
 				@media screen and ( min-width: $tablet_landscape+px ) {
@@ -46,7 +46,7 @@
 			}
 		}
 	}
-	
+
 	.details {
 		display: none;
 		position: absolute; right: 0; top: 0; z-index: 15;

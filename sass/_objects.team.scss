@@ -1,9 +1,9 @@
 #team {	
 	.o-media {
 		@media screen and ( min-width: $tablet_landscape+px ) {
-			@include transition-property(all);
-			@include transition-duration(6s);
-			@include transition-timing-function(ease-in-out);
+			//@include transition-property(all);
+			//@include transition-duration(6s);
+			//@include transition-timing-function(ease-in-out);
 		}
 	}
 	
@@ -18,6 +18,9 @@
 			
 			.o-media {
 				@media screen and ( min-width: $tablet_landscape+px ) {
+					@include transition-property(all);
+					@include transition-duration(6s);
+					@include transition-timing-function(ease-in-out);
 					@include transform(scale(1.1));
 				}				
 			}

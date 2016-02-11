@@ -114,15 +114,19 @@
 	}
 	
 	.owl-nav {
-			@media screen and ( max-width: $tablet_landscape - 1 + px ) {
-				top: 230px;
-				bottom: auto;
-			}
-			
-			@media screen and ( max-width: $break_small+px ) {
-		    	display: none;
-		    }
+		div {
+			color: white;
 		}
+
+		@media screen and ( max-width: $tablet_landscape - 1 + px ) {
+			top: 230px;
+			bottom: auto;
+		}
+		
+		@media screen and ( max-width: $break_small+px ) {
+	    	display: none;
+	    }
+	}
 
 	.show-details {
 		@media screen and ( max-width: $tablet_landscape - 1 + px ) {

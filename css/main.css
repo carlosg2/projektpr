@@ -637,6 +637,59 @@ img {
   #clients .owl-carousel {
     width: 100%; } }
 
+.owl-nav {
+  position: absolute;
+  left: 40px;
+  bottom: 35px; }
+  .owl-nav div {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms;
+    -o-transition-duration: 300ms;
+    transition-duration: 300ms;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    color: inherit; }
+    .owl-nav div:after {
+      text-align: center;
+      line-height: 36px; }
+    .owl-nav div.owl-prev:after {
+      content: '←'; }
+    .owl-nav div.owl-next:after {
+      display: block;
+      content: '→'; }
+    .desktop .owl-nav div:hover {
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      transform: scale(1.2); }
+    .owl-nav div:active {
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      transform: scale(1.1); }
+
 #portfolio .bg-white h2,
 #portfolio .bg-gray h2 {
   color: #bec8cc; }
@@ -765,6 +818,9 @@ img {
 @media screen and (max-width: 600px) {
   #portfolio .owl-carousel {
     display: block; } }
+
+#portfolio .owl-nav div {
+  color: white; }
 
 @media screen and (max-width: 1023px) {
   #portfolio .owl-nav {
@@ -1343,59 +1399,6 @@ img {
 
 #about .owl-carousel .owl-item .o-layout__item {
   width: 100%; }
-
-.owl-nav {
-  position: absolute;
-  left: 40px;
-  bottom: 35px; }
-  .owl-nav div {
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
-    -webkit-transition-property: all;
-    -moz-transition-property: all;
-    -o-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 300ms;
-    -moz-transition-duration: 300ms;
-    -o-transition-duration: 300ms;
-    transition-duration: 300ms;
-    -webkit-transition-timing-function: ease-in-out;
-    -moz-transition-timing-function: ease-in-out;
-    -o-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out;
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    margin-right: 6px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: inherit;
-    text-align: center;
-    cursor: pointer;
-    color: white; }
-    .owl-nav div:after {
-      text-align: center;
-      line-height: 34px; }
-    .owl-nav div.owl-prev:after {
-      content: '←'; }
-    .owl-nav div.owl-next:after {
-      display: block;
-      content: '→'; }
-    .desktop .owl-nav div:hover {
-      -webkit-transform: scale(1.2);
-      -moz-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-      -o-transform: scale(1.2);
-      transform: scale(1.2); }
-    .owl-nav div:active {
-      -webkit-transform: scale(1.1);
-      -moz-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      -o-transform: scale(1.1);
-      transform: scale(1.1); }
 
 /*
  * Background and related text colors

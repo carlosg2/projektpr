@@ -15,12 +15,11 @@
 		}
 		text-align: center;
 		cursor: pointer;
-		color: white;
+		color: inherit;
 
 		&:after {
-			
 		    text-align: center;
-		    line-height: 34px;
+		    line-height: 36px;
 		}
 
 		&.owl-prev {

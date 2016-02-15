@@ -114,9 +114,10 @@ jQuery(function($) {
 			});
 		},
 		team: function() {
-			var el = $('#team'),
+			var el = $('#team'), doublesquare,
 				w = $('.worker', el),
-				workers = [];
+				workers = [],
+				ww = $(window).width();
 
 			// Pobierz do tablicy
 			w.each(function() {
@@ -129,7 +130,35 @@ jQuery(function($) {
 			w.each(function(i) {
 				$(this).empty().append( workers[i] );
 			});
+			
+			// Zmien zdjecie w boxie Vertical na duze
+			function showDouble() {
+				var v = el.find('.vertical-photo .o-media'),
+					n = v.attr('src').replace("_square", "_doublesquare"); 
+				
+				v.attr('src', n);
+				doublesquare = true;
+			}
+			
+			// Zmien zdjecie w boxie Vertical na male
+			function showSquare() {
+				var v = el.find('.vertical-photo .o-media'),
+					n = v.attr('src').replace("_doublesquare", "_square"); 
+				
+				v.attr('src', n);
+				doublesquare = false;
+			}
 
+			ww > 1024 && showDouble();
+
+			// Rwd
+			
+			$(window).resize(debouncer(function(e) {
+				ww = $(window).width();
+				
+				(ww < 1024 && doublesquare === true) ? showSquare() : showDouble();
+	
+			}));
 		},
 		validate: function() {
 			var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/,
@@ -201,13 +230,8 @@ jQuery(function($) {
 				}
 			});
 
-			if ($('.mfp-iframe').length>0) {
-				Layout.magnific();
-			}
-			
-			if ($('#team').length>0) {
-				Layout.team();
-			}
+			$('.mfp-iframe').length>0 && Layout.magnific();
+			$('#team').length>0 && Layout.team();
 		}
 	};
 	var Slider = {

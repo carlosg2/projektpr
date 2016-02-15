@@ -1,12 +1,4 @@
 #team {	
-	.o-media {
-		@media screen and ( min-width: $tablet_landscape+px ) {
-			//@include transition-property(all);
-			//@include transition-duration(6s);
-			//@include transition-timing-function(ease-in-out);
-		}
-	}
-	
 	.o-layout__item {	
 		overflow: hidden;
 
@@ -28,8 +20,17 @@
 	}
 	
 	.vertical-photo {
-		@media screen and ( max-width: $tablet_landscape - 1 + px ) {
-			display: none;
+		@media screen and ( min-width: $break_small + 1 + px ) and ( max-width: $tablet_landscape - 1 + px ) {
+			
+			background-color: $color-gray-background;
+	
+			img {
+				width: 50%;
+			}
+			
+			.c-caption {
+				width: 50%;
+			}
 		}
 	}
 }

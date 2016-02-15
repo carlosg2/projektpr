@@ -12,7 +12,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-linkedin:before {
+    content: "\e904";
+}
 .icon-google-plus:before {
     content: "\e900";
 }

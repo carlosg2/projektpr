@@ -56,28 +56,60 @@ jQuery(function($) {
 			});
 		},
 		relocations: function() {
-			var el = $('#our-profiles'),
-				status;
-
-			function init() {
-				el.detach();
-				$('#newsletter').after(el);
-				status = true;
-			}
-			$(window).resize(debouncer(function(e) {
-				if (window_smaller_than(1024)) {
-					if (status === false) {
-						init();
-					}
-				} else {
+			function profiles() {
+				var el = $('#our-profiles'),
+					status;
+	
+				function init() {
 					el.detach();
-					$('#contact').append(el);
-					status = false;
+					$('#newsletter').after(el);
+					status = true;
 				}
-			}));
-			if (window_smaller_than(1024)) {
-				init();
+				$(window).resize(debouncer(function(e) {
+					if (window_smaller_than(1024)) {
+						if (status === false) {
+							init();
+						}
+					} else {
+						el.detach();
+						$('#contact').append(el);
+						status = false;
+					}
+				}));
+				if (window_smaller_than(1024)) {
+					init();
+				}
 			}
+			
+			function newsletter_and_profiles() {
+				var el = $('#contact'), i,
+					status;
+	
+				function init() {
+					i = $('.height-md:first-of-type', el).detach();
+					$('#contact').append(i);
+					status = true;
+				}
+
+				$(window).resize(debouncer(function(e) {
+					if (window_smaller_than(601)) {
+						if (status === false) {
+							init();
+						}
+					} else {
+						i = $('.height-md:last-of-type', el).detach();
+						$('#contact').prepend(i);
+						status = false;
+					}
+				}));
+
+				if (window_smaller_than(601)) {
+					init();
+				}
+			}
+			
+			profiles();
+			newsletter_and_profiles();
 		},
 		showElements: function() {
 			var el = $('.o-layout');

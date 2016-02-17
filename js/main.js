@@ -1,3 +1,5 @@
+/*jshint expr:true */
+
 function debouncer(func, timeout) {
 	var timeoutID;
 	timeout = timeout || 200;

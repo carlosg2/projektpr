@@ -58,6 +58,7 @@
 		}
 		
 		@media screen and ( max-width: $break_small+px ) {
+			display: block;
 			position: relative;
 			right: auto; top: auto;
 			height: auto;

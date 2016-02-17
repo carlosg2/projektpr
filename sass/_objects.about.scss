@@ -1,4 +1,10 @@
 #about {
+	.height-md {
+		@media screen and ( max-width: $break_small+px ) {
+			height: auto;
+		}
+	}
+	
 	.o-about__proloque {
 		float: right;
 	}

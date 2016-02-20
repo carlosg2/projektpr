@@ -273,18 +273,16 @@ jQuery(function($) {
 			var owl = $('#about .owl-carousel'),
 				status;
 
-			function description() {
-				var box = $('#about .type-active');
-				
-				box.on('click', function() {
+			function description() {				
+				owl.on('click', '.type-active', function() {
 					$(this).toggleClass('show-description');
 				});
 				
-				box.on('mouseout', function() {
+				owl.on('mouseout', function() {
 					$(this).removeClass('show-description');
 				});
 			}
-			
+
 			function startOwl() {
 				owl.owlCarousel({
 					dots: false,
@@ -300,9 +298,7 @@ jQuery(function($) {
 					dest = $('.o-about__proloque .o-box');
 				
 				nav.detach();
-				dest.append(nav);
-
-				
+				dest.append(nav);				
 			}
 			
 			description();

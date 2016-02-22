@@ -225,6 +225,10 @@ body {
 	}
 }
 
+b, strong {
+	font-weight: $font-weight-bold;
+}
+
 .empty {
 	@media screen and ( max-width: $tablet_landscape - 1 + px ) {
 		display: none;

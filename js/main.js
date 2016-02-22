@@ -58,7 +58,7 @@ jQuery(function($) {
 		relocations: function() {
 			function profiles() {
 				var el = $('#our-profiles'),
-					status;
+					status = false;
 	
 				function init() {
 					el.detach();
@@ -71,9 +71,11 @@ jQuery(function($) {
 							init();
 						}
 					} else {
-						el.detach();
-						$('#contact').append(el);
-						status = false;
+						if (status === true) {
+							el.detach();
+							$('#address_gdansk').after(el);
+							status = false;
+						}
 					}
 				}));
 				if (window_smaller_than(1024)) {
@@ -97,9 +99,11 @@ jQuery(function($) {
 							init();
 						}
 					} else {
-						i = $('.height-md:last-of-type', el).detach();
-						$('#contact').prepend(i);
-						status = false;
+						if (status === true) {
+							i = $('.height-md:last-of-type', el).detach();
+							$('#contact').prepend(i);
+							status = false;
+						}
 					}
 				}));
 

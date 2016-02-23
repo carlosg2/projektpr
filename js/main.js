@@ -51,12 +51,12 @@ jQuery(function($) {
 	var Layout = {
 		cookies: function() {
 			var el = $('.c-cookies');
-			if (Cookies.get('projektpr') !== 1) {
+			if (Cookies.get('projektpr') != 1) {
 				$(el).show();
 			}
 			$('.is-ok', el).on('click', function(e){
 				e.preventDefault();
-				Cookies.set("projektpr", 1, { expires: 356, path: '/' });
+				Cookies.set("projektpr", 1, { expires: 356 });
 				$(el).fadeOut();		
 			});	
 		},

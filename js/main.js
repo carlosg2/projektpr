@@ -49,6 +49,17 @@ function goToTarget(target) {
 
 jQuery(function($) {
 	var Layout = {
+		cookies: function() {
+			var el = $('.c-cookies');
+			if (Cookies.get('projektpr') !== 1) {
+				$(el).show();
+			}
+			$('.is-ok', el).on('click', function(e){
+				e.preventDefault();
+				Cookies.set("projektpr", 1, { expires: 356, path: '/' });
+				$(el).fadeOut();		
+			});	
+		},
 		magnific: function() {
 			$('.mfp-iframe').magnificPopup({
 				type: 'iframe',
@@ -244,6 +255,7 @@ jQuery(function($) {
 			});
 		},
 		init: function() {
+			Layout.cookies();
 			Layout.validate();
 			Layout.relocations();
 			Layout.showElements();

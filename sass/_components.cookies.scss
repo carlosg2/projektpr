@@ -1,0 +1,64 @@
+.c-cookies {
+	position: fixed;
+	left: 0; bottom: 0;
+	z-index: 25;
+	display: none;
+	width: 100%;
+	color: $color-gray-oslo;
+	
+	.c-cookies__container {
+		background-color: white;
+	}
+	
+	.c-cookies__content {
+		position: relative; z-index: 5;
+
+		@media screen and ( min-width: 601px ) {
+			max-width: 70%;
+		}
+
+		p {
+			margin: 0 0 .5em 0;
+			font-size: em(14);
+		}
+	}
+	
+	.c-cookies__close {
+		@include border-radius(50%);
+		@include hover;
+		position: absolute;
+		right: 30px; top: 24px;
+		z-index: 10;
+		display: block;
+		width: 40px; height: 40px;
+		background-color: white;
+		border: 2px solid $color-gray-oslo;
+		text-align: center;
+		font: {
+			size: em(24);
+			weight: $font-weight-bold;
+		}
+		line-height: 32px;
+		
+		@media screen and ( min-width: 601px ) {
+			@include scut-center-transform(y);
+			right: 35px;
+		}
+		
+		&:hover {
+			background-color: $color-gray-oslo;
+			color: white;
+		}
+	}
+	
+	h4 {
+		font-size: em(24);
+		font-weight: $font-weight-bold;
+	}
+	
+	
+	
+	.o-wrapper {
+		position: relative;
+	}
+}

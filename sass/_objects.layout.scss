@@ -8,12 +8,12 @@
 		z-index: 5;
 		width: 25%;
 		height: 300px;
-		
+
 		@media screen and ( min-width: $tablet_landscape+px ) {
 			height: 25vw;
 			max-height: 300px;
 		}
-		
+
 		@media screen and ( max-width: $tablet_landscape - 1 +px ) {
 			width: 50%;
 		}

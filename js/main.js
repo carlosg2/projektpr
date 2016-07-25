@@ -49,6 +49,20 @@ function goToTarget(target) {
 
 jQuery(function($) {
 	var Layout = {
+		clip: function() {
+			var el = $('.mobile .clip');
+			
+			el.on('click', function(e) {
+				e.preventDefault();
+				var url = $(this).attr('href'),
+					c = $('.clipped', this);				
+				if (c.hasClass('is-visible')) {
+					window.open(url);
+				} else {
+					c.addClass('is-visible');
+				}
+			});
+		},
 		cookies: function() {
 			var el = $('.c-cookies');
 			if (Cookies.get('projektpr') != 1) {
@@ -255,6 +269,7 @@ jQuery(function($) {
 			});
 		},
 		init: function() {
+			Layout.clip();
 			Layout.cookies();
 			Layout.validate();
 			Layout.relocations();

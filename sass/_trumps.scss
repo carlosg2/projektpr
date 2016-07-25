@@ -245,14 +245,18 @@ b, strong {
 
 .clipped {
 	@include hover;
+	@include opacity(0);
 	@include transition-duration(600ms);
 	position: absolute;
 	left: 0;
 	top: 0;
 	z-index: 10;
 	background-color: rgba(242, 245, 246, 1);
-	-webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	//-webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	//clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	
+	//-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+	//clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 	
 	&__text {
 		position: absolute; left: 0; top: 0; z-index: 5;
@@ -272,8 +276,9 @@ b, strong {
 	@media screen and ( min-width: 1024px ) {
 		&:hover {
 			.clipped {
-				-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-				clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+				@include opacity(1);
+				//-webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+				//clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
 			}		
 		}
 	}
